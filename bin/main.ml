@@ -22,8 +22,10 @@ let generate_json fields =
   `Assoc json_fields
 
 let () =
-    print_endline "Enter the fields in format 'your_var_name:json_type,another_var_name:another_json_type'";
-    let input = read_line () in
-    let fields = parse_input input in
-    let json = generate_json fields in
-    print_endline (Yojson.Basic.pretty_to_string json)
+    if Array.length Sys.argv < 2 then
+      print_endline "Usage: komari field1:type1,field2:type2,..."
+    else
+      let input = Sys.argv.(1) in
+      let fields = parse_input input in
+      let json = generate_json fields in
+      print_endline (Yojson.Basic.pretty_to_string json)
