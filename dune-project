@@ -5,20 +5,20 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github regularpoe/komari))
 
-(authors "Author Name")
+(authors "regularpoe")
 
-(maintainers "Maintainer Name")
+(maintainers "regularpoe")
 
-(license LICENSE)
+(license GPL-3.0)
 
-(documentation https://url/to/documentation)
+(documentation https://github.com/regularpoe/komari)
 
 (package
  (name komari)
- (synopsis "A short synopsis")
- (description "A longer description")
+ (synopsis "Basic schema to JSON")
+ (description "Basic schema to JSON generator")
  (depends ocaml dune)
  (tags
   (topics "to describe" your project)))

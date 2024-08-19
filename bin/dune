@@ -1,4 +1,4 @@
 (executable
  (public_name komari)
  (name main)
- (libraries komari))
+ (libraries yojson))
